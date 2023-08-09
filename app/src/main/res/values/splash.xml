@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.App.Starting" parent="Theme.LanguageLearning">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/illustrationssplash</item>
+        <item name="windowSplashScreenBackground">#410FA3</item>
+        <item name="postSplashScreenTheme">@style/Theme.LanguageLearning</item>
+    </style>
+
+
+</resources>
