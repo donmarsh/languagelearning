@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Language Learning</string>
+    <string name="firstOnboardPageTitle">Confidence in your words</string>
+    <string name="secondOnboardPageTitle">Take your time to learn</string>
+    <string name="thirdOnboardPageTitle">The lessons you need to learn</string>
+    <string name="firstOnboardPageContent">With conversation-based learning, you\'ll be talking from lesson one</string>
+    <string name="secondOnboardPageContent">Develop a habit of learning and make it a part of your daily routine</string>
+    <string name="thirdOnboardPageContent">Using a variety of learning styles to learn and retain</string>
+    <string name="choose_a_language">Choose a language</string>
 </resources>
