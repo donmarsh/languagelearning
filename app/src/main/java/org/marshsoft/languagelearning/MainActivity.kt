@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import org.marshsoft.languagelearning.ui.theme.LanguageLearningTheme
+import org.marshsoft.languagelearning.ui.views.OnBoardingScreen
 import org.marshsoft.languagelearning.viewmodels.SplashViewModel
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    OnBoardingScreen()
                 }
             }
         }
