@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "org.marshsoft.languagelearning"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "org.marshsoft.languagelearning"
@@ -50,7 +50,11 @@ android {
 }
 
 dependencies {
+    val nav_version = "2.7.1"
     val accompanistVersion = "0.28.0"
+
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation("androidx.navigation:navigation-runtime-ktx:$nav_version")
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
     implementation("androidx.activity:activity-compose:1.7.2")

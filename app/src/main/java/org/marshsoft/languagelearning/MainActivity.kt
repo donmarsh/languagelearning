@@ -12,8 +12,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.compose.NavHost
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import org.marshsoft.languagelearning.ui.theme.LanguageLearningTheme
+import org.marshsoft.languagelearning.ui.views.LoginScreen
 import org.marshsoft.languagelearning.ui.views.OnBoardingScreen
+import org.marshsoft.languagelearning.ui.views.SignUpScreen
 import org.marshsoft.languagelearning.viewmodels.SplashViewModel
 
 class MainActivity : ComponentActivity() {
@@ -29,7 +35,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    OnBoardingScreen()
+                    NavHostContainer(navController = rememberNavController())
                 }
             }
         }
@@ -50,4 +56,23 @@ fun GreetingPreview() {
     LanguageLearningTheme {
         Greeting("Android")
     }
+}
+@Composable
+fun NavHostContainer(navController: NavHostController) {
+    NavHost(
+        navController = navController,
+        startDestination = "onboarding",
+    ){
+        composable("onboarding") {
+            OnBoardingScreen(navController)
+        }
+        composable("signup") {
+            SignUpScreen(navController = navController)
+        }
+        composable("login") {
+            LoginScreen(navController = navController)
+        }
+
+    }
+
 }
